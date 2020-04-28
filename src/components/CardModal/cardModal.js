@@ -1,34 +1,18 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Balkirat 
-Balkirat
-/
-onboarding
-Private
-2
-00
- Code Issues 0 Pull requests 0 Actions Projects 0 Security 0 Insights Settings
-onboarding/src/component/CardModal/cardModal.js /
-@Balkirat Balkirat added modal structure
-111635a 10 minutes ago
-107 lines (96 sloc)  2.69 KB
-  
-Code navigation is available!
-Navigate your code with ease. Click on function and method calls to jump to their definitions or references in the same repository. Learn more
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
-import "./cardModal.scss"
+import "./cardModal.scss";
+import cindy from "../../assets/images/Cindy cropped.jpg";
+import chat from "../../assets/images/chat.svg";
+import game from "../../assets/images/game.svg";
+import thanks from "../../assets/images/thanks.svg";
+import gift from "../../assets/images/gift.svg";
+import button from "../../assets/images/button.svg";
+import close from "../../assets/images/close.svg";
+import circle from "../../assets/images/Offline-Dot.svg"
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -90,7 +74,7 @@ export default function SpringModal() {
   return (
     <div>
       <button type="button" onClick={handleOpen}>
-        react-spring
+        Open
       </button>
       <Modal
         aria-labelledby="spring-modal-title"
@@ -105,24 +89,26 @@ export default function SpringModal() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
+          <div className="modal">
+          <div className="modal__top"><button className="modal__close"><img src={close} alt="close"></img></button></div>
             <div className="card">
-                <div className="card__info">
-                    <img src="" alt="profile pic"></img>
-                    <h2>Cindy Thompson</h2>
-                    <h5>Graphic Designer - Design Dep.</h5>
-                    <p><span>@</span>Offline</p>
-                    <button>View Profile</button>
+                <div className="card__profile">
+                    <img className="card__image" src={cindy} alt="profile pic"></img>
+                    <h2 className="card__heading">Cindy Thompson</h2>
+                    <h5 className="card__job">Graphic Designer - Design Dep.</h5>
+                    <p className="card__status"><span><img src={circle} alt="circle"></img></span>Offline</p>
+                    <button className="card__profile-button"><p>View Profile</p></button>
                 </div>
                 <div className="card__content">
-                    <h3>What would you like to do</h3>
-
+                    <h3 className="card__content--heading">What would you like to do</h3>
+                    <div className="button">
+                        <button className="button__logo"><img src={chat} alt="button logo"></img></button>
+                        <button className="button__logo"><img src={game} alt="button logo"></img></button>
+                        <button className="button__logo"><img src={thanks} alt="button logo"></img></button>
+                        <button className="button__logo"><img src={gift} alt="button logo"></img></button>
+                    </div>
                 </div>
-
-
             </div>
-            {/* <h2 id="spring-modal-title">Spring modal</h2>
-            <p id="spring-modal-description">react-spring animates me.</p> */}
           </div>
         </Fade>
       </Modal>

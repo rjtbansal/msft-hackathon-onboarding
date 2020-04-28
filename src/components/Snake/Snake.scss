@@ -1,0 +1,12 @@
+.Snake {
+    
+
+    &__part {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    transform: translate(-35%, -20%);
+    z-index: 2;
+    margin: 0.1rem;
+    }
+}

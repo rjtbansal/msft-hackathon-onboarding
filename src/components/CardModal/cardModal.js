@@ -60,7 +60,7 @@ Fade.propTypes = {
   onExited: PropTypes.func,
 };
 
-export default function SpringModal() {
+export default function SpringModal(props) {
 
   const [togglePoints, setTogglePoints] = useState(false);
   const classes = useStyles();
@@ -146,6 +146,7 @@ export default function SpringModal() {
                   </h3>
                   <div className="button">
                     <button className="button__logo" onClick={() => {
+                      props.increasePoints()
                       setTogglePoints(true)
                       setTimeout(()=>{
                           setTogglePoints(false)

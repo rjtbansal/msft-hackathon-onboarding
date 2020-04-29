@@ -4,7 +4,8 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Office from "./components/Office/Office";
 import Snake from "./components/Snake/Snake";
 import CardModal from "./components/CardModal/cardModal";
-import BulletinBoard from "./components/BulletinBoard/bulletinBoard"
+import BulletinBoard from "./components/BulletinBoard/bulletinBoard";
+import InstructionModal from "./components/InstructionModal/instructionModal"
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // FOOD COORDINATES
@@ -176,7 +177,9 @@ class App extends Component {
               <BulletinBoard />
             </div>
           )}
-          {/* <div className="App__modal-button"><CardModal /></div> */}
+          <div className="App__instruction-modal">
+            <InstructionModal />
+          </div>
         </Office>
             </Route>
             <Route exact path="/" >

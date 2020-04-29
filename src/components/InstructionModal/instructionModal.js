@@ -5,11 +5,10 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import { useSpring, animated } from "react-spring/web.cjs";
 // web.cjs is required for IE 11 support
-import chatBubble from "../../assets/images/chat5.png";
 import bulletinBoard from "../../assets/images/Bulletinboard.svg";
-import "./bulletinBoard.scss";
+import "./instructionModal.scss";
 import Close from "../../assets/images/close.svg";
-import survey from "../../assets/images/survey.svg";
+import instructions from "../../assets/images/Instructions.png"
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -22,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid #000",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+   
   },
 }));
 
@@ -70,14 +70,8 @@ export default function SpringModal() {
 
   return (
     <div>
-      <button type="button" className="speech-button" onClick={handleOpen}>
-        <div className="speech-bubble">
-          <div id="wave">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        </div>
+      <button type="button" className="instruction-button " onClick={handleOpen}>
+            How to play
       </button>
       <Modal
         aria-labelledby="spring-modal-title"
@@ -92,13 +86,12 @@ export default function SpringModal() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
+          <div >
             <div className="modal__container">
-              <img src={bulletinBoard} alt="bb"></img>
+              <img className="instruction__image" src={instructions} alt="bb"></img>
               <button className="modal__container__close" onClick={handleClose}>
-                <img src={Close} alt="close"></img>
+              <img src={Close} alt="close" ></img>
               </button>
-              <a target="_blank"href="https://forms.gle/uXThXBwUhPZv2YmP6"><img className="modal__survey" src={survey} alt="survey"></img></a>
             </div>
           </div>
         </Fade>

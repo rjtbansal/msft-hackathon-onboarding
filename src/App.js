@@ -21,6 +21,7 @@ const initialState = {
   direction: "RIGHT",
   speed: 250,
   snakeBody: [[4, 40]],
+  points: 256
 };
 
 class App extends Component {
@@ -132,13 +133,19 @@ class App extends Component {
     }
   };
 
+  increasePoints = () => {
+    this.setState({
+      points : this.state.points + 20
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <BrowserRouter>
           <Switch>
             <Route path="/office">
-            <Office>
+            <Office points={this.state.points}>
           <Snake snakeBody={this.state.snakeBody} />
           
           {((this.state.snakeBody[0][0] === 72 &&
@@ -152,7 +159,7 @@ class App extends Component {
             (this.state.snakeBody[0][0] === 72 &&
               this.state.snakeBody[0][1] === 68)) && (
             <div className="App__modal-button">
-              <CardModal />
+              <CardModal increasePoints = {this.increasePoints} />
             </div>
           )}
           {((this.state.snakeBody[0][0] === 24 &&

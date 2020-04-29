@@ -1,0 +1,32 @@
+.landing-page {
+  //background: url(../../assets/images/landing-page-background.png) no-repeat center center scroll; 
+  background-image: url(../../assets/images/landing-page-background.png);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000vh;
+}
+
+.demo-button {
+  font-family: HelveticaNeue;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: -0.38px;
+    text-align: center;
+    color: #ffffff;
+    width: 180px;
+    height: 64px;
+    border-radius: 16px;
+    background-image: linear-gradient(to right, #9bd74d -18%, #24c5ff 30%, #2487ff 85%);
+    cursor: pointer;
+    border-style: none;
+    &:hover {
+      border: 2px solid black;
+    }
+}
+
+.button1 {
+  margin-top: 65rem;
+  margin-right: 111rem;
+}

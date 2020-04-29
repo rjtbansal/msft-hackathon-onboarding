@@ -1,28 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import { useSpring, animated } from "react-spring/web.cjs"; // web.cjs is required for IE 11 support
 import "./cardModal.scss";
 import cindy from "../../assets/images/Cindy cropped.jpg";
 import chat from "../../assets/images/chat.svg";
 import game from "../../assets/images/game.svg";
 import thanks from "../../assets/images/thanks.svg";
 import gift from "../../assets/images/gift.svg";
-import button from "../../assets/images/button.svg";
 import close from "../../assets/images/close.svg";
-import circle from "../../assets/images/Offline-Dot.svg"
+import circle from "../../assets/images/Offline-Dot.svg";
+import chatBubble from "../../assets/images/Chat bubble (3).png";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: "2px solid #000",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -60,6 +61,8 @@ Fade.propTypes = {
 };
 
 export default function SpringModal() {
+
+  const [togglePoints, setTogglePoints] = useState(false);
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -68,13 +71,23 @@ export default function SpringModal() {
   };
 
   const handleClose = () => {
+    console.log("in clooooooooose")
     setOpen(false);
   };
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
-        Open
+      {/* <button type="button" onClick={handleOpen}>
+        <img src={chatBubble} alt="chatBubble"></img>
+      </button> */}
+      <button type="button" className="speech-button--down" onClick={handleOpen}>
+        <div className="speech-bubble--down">
+          <div id="wave">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
       </button>
       <Modal
         aria-labelledby="spring-modal-title"
@@ -89,27 +102,71 @@ export default function SpringModal() {
         }}
       >
         <Fade in={open}>
-          <div className="modal">
-          <div className="modal__top"><button className="modal__close"><img src={close} alt="close"></img></button></div>
-            <div className="card">
+          {togglePoints ? (
+            <div className="modal">
+              <div className="modal__top">
+                <button className="modal__close" onClick={handleClose}>
+                  <img src={close} alt="close" ></img>
+                </button>
+              </div>
+              <div className="points">
+                <h3>Invite Sent</h3>
+                <h1>+20 Points</h1>
+              </div>
+            </div>
+          ) : (
+            <div className="modal">
+              <div className="modal__top">
+                <button className="modal__close" onClick={() => handleClose()}>
+                  <img src={close} alt="close"></img>
+                </button>
+              </div>
+              <div className="card">
                 <div className="card__profile">
-                    <img className="card__image" src={cindy} alt="profile pic"></img>
-                    <h2 className="card__heading">Cindy Thompson</h2>
-                    <h5 className="card__job">Graphic Designer - Design Dep.</h5>
-                    <p className="card__status"><span><img src={circle} alt="circle"></img></span>Offline</p>
-                    <button className="card__profile-button"><p>View Profile</p></button>
+                  <img
+                    className="card__image"
+                    src={cindy}
+                    alt="profile pic"
+                  ></img>
+                  <h2 className="card__heading">Cindy Thompson</h2>
+                  <h5 className="card__job">Graphic Designer - Design Dep.</h5>
+                  <p className="card__status">
+                    <span>
+                      <img src={circle} alt="circle"></img>
+                    </span>
+                    Offline
+                  </p>
+                  <button className="card__profile-button">
+                    <p>View Profile</p>
+                  </button>
                 </div>
                 <div className="card__content">
-                    <h3 className="card__content--heading">What would you like to do</h3>
-                    <div className="button">
-                        <button className="button__logo"><img src={chat} alt="button logo"></img></button>
-                        <button className="button__logo"><img src={game} alt="button logo"></img></button>
-                        <button className="button__logo"><img src={thanks} alt="button logo"></img></button>
-                        <button className="button__logo"><img src={gift} alt="button logo"></img></button>
-                    </div>
+                  <h3 className="card__content--heading">
+                    What would you like to do
+                  </h3>
+                  <div className="button">
+                    <button className="button__logo" onClick={() => {
+                      setTogglePoints(true)
+                      setTimeout(()=>{
+                          setTogglePoints(false)
+                      },5000)
+                    }}>
+                      <img src={chat} alt="button logo"></img>
+                    </button>
+                    <button className="button__logo">
+                      <img src={game} alt="button logo"></img>
+                    </button>
+                    <button className="button__logo">
+                      <img src={thanks} alt="button logo"></img>
+                    </button>
+                    <button className="button__logo">
+                      <img src={gift} alt="button logo"></img>
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
-          </div>
+          )}
         </Fade>
       </Modal>
     </div>

@@ -3,6 +3,7 @@ import "./App.scss";
 import Office from "./components/Office/Office";
 import Snake from "./components/Snake/Snake";
 import CardModal from "./components/CardModal/cardModal";
+import BulletinBoard from "./components/BulletinBoard/bulletinBoard"
 
 // FOOD COORDINATES
 const randomCoordinates = () => {
@@ -17,7 +18,7 @@ const initialState = {
   food: randomCoordinates(),
   direction: "RIGHT",
   speed: 250,
-  snakeBody: [[0, 0]],
+  snakeBody: [[4, 40]],
 };
 
 class App extends Component {
@@ -134,8 +135,36 @@ class App extends Component {
       <div className="App">
         <Office>
           <Snake snakeBody={this.state.snakeBody} />
-          {(this.state.snakeBody[0][0] === 72 && this.state.snakeBody[0][1] === 74 )&& <div className="App__modal-button"><CardModal /></div>}
-          <div className="App__modal-button"><CardModal /></div>
+          
+          {((this.state.snakeBody[0][0] === 72 &&
+            this.state.snakeBody[0][1] === 74) ||
+            (this.state.snakeBody[0][0] === 72 &&
+              this.state.snakeBody[0][1] === 76) ||
+            (this.state.snakeBody[0][0] === 72 &&
+              this.state.snakeBody[0][1] === 72) ||
+            (this.state.snakeBody[0][0] === 72 &&
+              this.state.snakeBody[0][1] === 70) ||
+            (this.state.snakeBody[0][0] === 72 &&
+              this.state.snakeBody[0][1] === 68)) && (
+            <div className="App__modal-button">
+              <CardModal />
+            </div>
+          )}
+          {((this.state.snakeBody[0][0] === 24 &&
+            this.state.snakeBody[0][1] === 0) ||
+            (this.state.snakeBody[0][0] === 26 &&
+              this.state.snakeBody[0][1] === 0) ||
+            (this.state.snakeBody[0][0] === 28 &&
+              this.state.snakeBody[0][1] === 0) ||
+            (this.state.snakeBody[0][0] === 30 &&
+              this.state.snakeBody[0][1] === 0) ||
+            (this.state.snakeBody[0][0] === 72 &&
+              this.state.snakeBody[0][1] === 0)) && (
+            <div className="App__bulletin-board">
+              <BulletinBoard />
+            </div>
+          )}
+          {/* <div className="App__modal-button"><CardModal /></div> */}
         </Office>
       </div>
     );

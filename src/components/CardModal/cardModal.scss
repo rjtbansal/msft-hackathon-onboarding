@@ -3,8 +3,8 @@
 
 .modal{
     width: 696px;
-    
     border-radius: 16px;
+    height: 500px;
     border: solid 2px #000000;
     background-color: #fffff2;
     &__top{
@@ -33,7 +33,7 @@
     }
     &__profile{
         width: 40%;
-        border-right: 1px solid black;
+        border-right: 2px solid black;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -154,3 +154,70 @@
     }
 }
 
+.points{
+    width: 100%;
+    height: 82%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & >h3{
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.75;
+        letter-spacing: normal;
+        color: #1f1f1f;
+        margin-bottom: 16px;
+    }
+    & >h1{
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.7;
+        letter-spacing: normal;
+        color: #22c214;
+    }
+}
+
+.speech-button--down {
+    border: none;
+    background: transparent;
+  }
+  
+  .speech-bubble--down {
+    position: relative;
+    background: greenyellow;
+    border-radius: 35px;
+  }
+.speech-bubble--down:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 22px solid transparent;
+	border-top-color: greenyellow;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -11px;
+	margin-bottom: -22px;
+}
+
+.modal__container{
+    position: relative;
+    &__close{
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+}

@@ -1,5 +1,15 @@
-.myImg {
-  width: 100%;
+.landing-page{
+  position: relative;
+}
+
+
+// .myImg {
+//   width: 100%;
+//   height: 100%;
+// }
+
+.myImg{
+  width: 99vw;
   height: 100%;
 }
 
@@ -24,25 +34,25 @@
 
 .button1 {
   position: absolute;
-  top: 70%;
-  right: 82%;
+  top: 9%;
+  left: 6.5%;
 }
 
 .button2 {
   position: absolute;
-  right: 32.5%;
-  top: 210rem;
+  left: 56%;
+  top: 34.5%;
 }
 
 .button3 {
-  position: relative;
-  bottom: 300rem;
-  right: 41rem;
+  position: absolute;
+  top: 52%;
+  left: 11.5%;
 }
 
 .button4 {
-  position: relative;
-  bottom: 188rem;
-  left: 8rem;
+  position: absolute;
+  top: 70%;
+  left: 56%;
 }
 

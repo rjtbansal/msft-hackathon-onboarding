@@ -1,7 +1,7 @@
 import React from 'react';
 import './LandingPage.scss';
 import { Link } from 'react-router-dom';
-import backgroundImage from '../../assets/images/landing-page-background.png';
+import backgroundImage from '../../assets/images/landing-page-final.png';
 
 const LandingPage = () => {
   return<div className="landing-page"> 

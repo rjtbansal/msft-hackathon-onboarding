@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "./App.scss";
+import LandingPage from './components/LandingPage/LandingPage';
 import Office from "./components/Office/Office";
 import Snake from "./components/Snake/Snake";
 import CardModal from "./components/CardModal/cardModal";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // FOOD COORDINATES
 const randomCoordinates = () => {
@@ -132,13 +134,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Office>
-          <Snake snakeBody={this.state.snakeBody} />
-          {(this.state.snakeBody[0][0] === 72 && this.state.snakeBody[0][1] === 74 )&& <div className="App__modal-button"><CardModal /></div>}
-          <div className="App__modal-button"><CardModal /></div>
-        </Office>
-      </div>
-    );
+        <BrowserRouter>
+          <Switch>
+            <Route path="/office">
+              <Office>
+                <Snake snakeBody={this.state.snakeBody} />
+                {(this.state.snakeBody[0][0] === 72 && this.state.snakeBody[0][1] === 74 )&& <div className="App__modal-button"><CardModal /></div>}
+                <div className="App__modal-button"><CardModal /></div>
+              </Office>
+            </Route>
+            <Route exact path="/" >
+                <LandingPage />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </div>    
+      );
   }
 }
 

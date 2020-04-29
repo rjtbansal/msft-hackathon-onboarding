@@ -16,27 +16,33 @@
     &__points-card {
       position: absolute;
       width: 25rem;
-      height: 17.5rem;
+      height: 14.5rem;
       background-color: #FFFFF2;
-      top: 0%;
+      top: 0.1%;
       left: 0%;
       border-radius: 1rem;
       border: 0.2rem solid black;
       display: flex;
       flex-direction: column;
       z-index: 10;
-      
+      margin-top: -2rem;
+      margin-left: 0rem;
     }
 
     &__points-btn {
       width: 90%;
-      margin: 0.5rem auto;
-      padding: 0.75rem;
+      margin: 0rem auto;
+      height: 3.5rem;
+
       cursor: pointer;
       background-color: transparent;
       border: .15rem solid black;
       font-weight: 900;
-      border-radius: 0.4rem;;
+      border-radius: 0.4rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     &__user-img {
@@ -80,11 +86,4 @@
   top: 10px;
   width: 60px;
   z-index: 9;
-}
-
-.App__instruction-modal{
-  position: absolute;
-  right: 5%;
-  top: 20px;
-  z-index: 8;
 }

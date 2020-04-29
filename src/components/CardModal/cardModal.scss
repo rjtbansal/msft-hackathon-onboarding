@@ -1,223 +1,221 @@
-@import '../../mixins.scss';
+@import "../../mixins.scss";
 
-
-.modal{
-    width: 696px;
-    border-radius: 16px;
-    height: 500px;
-    border: solid 2px #000000;
-    background-color: #fffff2;
-    &__top{
-        width: 100%;
-        height: 34px;
-        border-bottom: solid 2px #000000;
-        background-color: #d27e00;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    &__close{
-        border:none;
-        background: transparent;
-        margin-right: 24px;
-    }
-}
-.card{
-    display: flex;
-    padding: 24px 30px;
-    justify-content: space-between;
-    &__top{
-        display: block;
-    }
-    &__profile{
-        width: 40%;
-        border-right: 2px solid black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    &__heading{
-        width: 193px;
-        height: 28px;
-        font-family: Montserrat;
-        font-size: 21px;
-        font-weight: 800;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.33;
-        letter-spacing: normal;
-        color: #1f1f1f;
-        text-align: center;
-        margin: 12px 0 6px 0;
-    }
-    &__job{
-        width: 211px;
-        height: 16px;
-        font-family: Montserrat;
-        font-size: 12px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.33;
-        letter-spacing: normal;
-        color: #898989;
-        text-align: center;
-        margin-bottom: 16px;
-    }
-    &__status{
-        width: fit-content;
-        height: 14px;
-        font-family: Montserrat;
-        font-size: 12px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.33;
-        letter-spacing: normal;
-        color: #000000;
-        margin-bottom: 24px;
-        & >span{
-            width: 13px;
-            height: 13px;
-            margin-right: 6px;
-        }
-    }
-
-    &__content{
-        width: 50%;
-        &--heading{
-            width: 231px;
-            height: 19px;
-            font-family: Montserrat;
-            font-size: 16px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.75;
-            letter-spacing: normal;
-            color: #1f1f1f;
-        }
-    }
-    &__image{
-        width: 194px;
-        height: 194px;
-        border-radius: 10px;
-    }
-    &__profile-button{
-        width: 194px;
-        height: 54px;
-        border:1px solid black;
-        border-radius: 16px;
-        background: transparent;
-        cursor: pointer;
-        & >p{
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Montserrat;
-            font-size: 16px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1;
-            letter-spacing: normal;
-            margin: auto;
-        }
-        & :hover{
-            background: black;
-            color: white;
-            border-radius: 16px;
-        }
-    }
-}
-
-.button{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    &__logo{
-        width: 140px;
-        margin-top: 24px;
-        height: 160px;
-        border-radius: 16px;
-        border: none;
-        cursor: pointer;
-        & :hover{
-            border: solid 3px #000000;
-            border-radius: 16px;
-            
-        }
-    }
-}
-
-.points{
+.modal {
+  width: 696px;
+  border-radius: 16px;
+  height: 500px;
+  border: solid 2px #000000;
+  background-color: #fffff2;
+  &__top {
     width: 100%;
-    height: 82%;
-    box-sizing: border-box;
+    height: 34px;
+    border-bottom: solid 2px #000000;
+    background-color: #d27e00;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__close {
+    border: none;
+    background: transparent;
+    margin-right: 24px;
+  }
+}
+.card {
+  display: flex;
+  padding: 24px 30px;
+  justify-content: space-between;
+  &__top {
+    display: block;
+  }
+  &__profile {
+    width: 40%;
+    border-right: 2px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    & >h3{
-        font-family: Montserrat;
-        font-size: 16px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.75;
-        letter-spacing: normal;
-        color: #1f1f1f;
-        margin-bottom: 16px;
+    justify-content: center;
+  }
+  &__heading {
+    width: 193px;
+    height: 28px;
+    font-family: Montserrat;
+    font-size: 21px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #1f1f1f;
+    text-align: center;
+    margin: 12px 0 6px 0;
+  }
+  &__job {
+    width: 211px;
+    height: 16px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #898989;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  &__status {
+    width: fit-content;
+    height: 14px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #000000;
+    margin-bottom: 24px;
+    & > span {
+      width: 13px;
+      height: 13px;
+      margin-right: 6px;
     }
-    & >h1{
-        font-family: Montserrat;
-        font-size: 40px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 0.7;
-        letter-spacing: normal;
-        color: #22c214;
+  }
+
+  &__content {
+    width: 50%;
+    &--heading {
+      width: 231px;
+      height: 19px;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.75;
+      letter-spacing: normal;
+      color: #1f1f1f;
     }
+  }
+  &__image {
+    width: 194px;
+    height: 194px;
+    border-radius: 10px;
+  }
+  &__profile-button {
+    width: 194px;
+    height: 54px;
+    border: 1px solid black;
+    border-radius: 16px;
+    background: transparent;
+    cursor: pointer;
+    & > p {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      margin: auto;
+    }
+    & :hover {
+      background: black;
+      color: white;
+      border-radius: 16px;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__logo {
+    width: 140px;
+    margin-top: 24px;
+    height: 160px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    & :hover {
+      border: solid 3px #000000;
+      border-radius: 16px;
+    }
+  }
+}
+
+.points {
+  width: 100%;
+  height: 82%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > h3 {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #1f1f1f;
+    margin-bottom: 16px;
+  }
+  & > h1 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.7;
+    letter-spacing: normal;
+    color: #22c214;
+  }
 }
 
 .speech-button--down {
-    border: none;
-    background: transparent;
-  }
-  
-  .speech-bubble--down {
-    position: relative;
-    background: greenyellow;
-    border-radius: 35px;
-  }
-.speech-bubble--down:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 22px solid transparent;
-	border-top-color: greenyellow;
-	border-bottom: 0;
-	border-right: 0;
-	margin-left: -11px;
-	margin-bottom: -22px;
+  border: none;
+  background: transparent;
 }
 
-.modal__container{
-    position: relative;
-    &__close{
-        position: absolute;
-        right: 28px;
-        top: 20px;
-        border: none;
-        background: transparent;
-        cursor: pointer;
+.speech-bubble--down {
+  position: relative;
+  background: greenyellow;
+  border-radius: 35px;
+  cursor: pointer;
+}
+.speech-bubble--down:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 22px solid transparent;
+  border-top-color: greenyellow;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -11px;
+  margin-bottom: -22px;
+}
+
+.modal__survey{
+    position: absolute;
+    bottom: 38px;
+    left: 403px;
+    z-index: 7;
+    cursor: pointer;
+    &:hover{
+        border: 3px solid black;
     }
 }

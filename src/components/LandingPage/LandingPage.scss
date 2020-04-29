@@ -1,11 +1,16 @@
 .landing-page {
-  //background: url(../../assets/images/landing-page-background.png) no-repeat center center scroll; 
+  
   background-image: url(../../assets/images/landing-page-background.png);
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
   height: 1000vh;
+}
+
+.myImg {
+  width: 90%;
+  height: 90%;
 }
 
 .demo-button {
@@ -28,6 +33,26 @@
 }
 
 .button1 {
-  margin-top: 65rem;
-  margin-right: 111rem;
+  position: absolute;
+  top: 150%;
+  right: 82%;
 }
+
+.button2 {
+  position: absolute;
+  right: 32.5%;
+  top: 265rem;
+}
+
+.button3 {
+  position: relative;
+  bottom: 300rem;
+  right: 50rem;
+}
+
+.button4 {
+  position: relative;
+  bottom: 188rem;
+  left: 8rem;
+}
+

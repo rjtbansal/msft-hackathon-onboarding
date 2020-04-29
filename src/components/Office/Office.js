@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Office.scss'
 import office from "../../assets/images/office.png"
+import coins from "../../assets/images/coin.svg"
 
 export default class Office extends Component {
 
@@ -17,6 +18,7 @@ export default class Office extends Component {
                 <div className="Office__points-container">
                     <img src="https://www.katarinaprice.com/wp-content/uploads/2012/03/IMG_6569-1.jpg" alt="" className="Office__user-img"/>
                     <h3 className="Office__points">
+                        <img src={coins} alt="" className="Office__coins"/>
                         {this.props.points}
                     </h3>
                 </div>

@@ -1,4 +1,5 @@
 @import "../../mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .modal {
   width: 696px;
@@ -42,7 +43,7 @@
   &__heading {
     width: 193px;
     height: 28px;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-size: 21px;
     font-weight: 800;
     font-stretch: normal;
@@ -56,7 +57,7 @@
   &__job {
     width: 211px;
     height: 16px;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-size: 12px;
     font-weight: bold;
     font-stretch: normal;
@@ -70,7 +71,7 @@
   &__status {
     width: fit-content;
     height: 14px;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-size: 12px;
     font-weight: bold;
     font-stretch: normal;
@@ -91,7 +92,7 @@
     &--heading {
       width: 231px;
       height: 19px;
-      font-family: Montserrat;
+      font-family: 'Montserrat';
       font-size: 16px;
       font-weight: bold;
       font-stretch: normal;
@@ -118,7 +119,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Montserrat;
+      font-family: 'Montserrat';
       font-size: 16px;
       font-weight: bold;
       font-stretch: normal;
@@ -162,7 +163,7 @@
   justify-content: center;
   align-items: center;
   & > h3 {
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
@@ -173,7 +174,7 @@
     margin-bottom: 16px;
   }
   & > h1 {
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-size: 40px;
     font-weight: bold;
     font-stretch: normal;
